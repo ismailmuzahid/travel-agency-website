@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanderly — Travel The World</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <!-- ============ NAVIGATION ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-plane-departure"></i>
+        <span>Wanderly<small>TRAVEL THE WORLD</small></span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#destinations" class="nav-link">Destinations</a>
+        <a href="#tours" class="nav-link">Tours</a>
+        <a href="#flights" class="nav-link">Flights</a>
+        <a href="#hotels" class="nav-link">Hotels</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#about" class="nav-link">About Us</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+12345678900" class="help">
+          <i class="fa-solid fa-phone"></i>
+          <span>Need Help?<strong>+1 234 567 8900</strong></span>
+        </a>
+        <button class="icon-btn" id="userBtn" aria-label="Account">
+          <i class="fa-regular fa-user"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="eyebrow"><i class="fa-solid fa-location-arrow"></i> EXPLORE. DREAM. DISCOVER.</span>
+      <h1>Discover Amazing <em>Places with Us</em></h1>
+      <p>Find the best tours, hotels and flights: everything you need for the perfect trip.</p>
+      <a href="#destinations" class="btn btn-primary">
+        Explore Now <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING WIDGET ============ -->
+  <section class="booking-section">
+    <div class="container">
+      <div class="booking-widget">
+        <div class="booking-tabs">
+          <button class="tab-btn active" data-tab="flights"><i class="fa-solid fa-plane"></i> Flights</button>
+          <button class="tab-btn" data-tab="hotels"><i class="fa-solid fa-hotel"></i> Hotels</button>
+          <button class="tab-btn" data-tab="tours"><i class="fa-solid fa-mountain-sun"></i> Tours</button>
+          <button class="tab-btn" data-tab="packages"><i class="fa-solid fa-gift"></i> Packages</button>
+        </div>
+
+        <!-- Flights -->
+        <form class="booking-form active" id="flights">
+          <div class="field"><label>From</label>
+            <div class="input-wrap">
+            <i class="fa-solid fa-plane-departure"></i>
+            <input type="text" placeholder="New York (NYC)" value="New York (NYC)" />
+          </div></div>
+          <div class="swap"><i class="fa-solid fa-right-left"></i></div>
+          <div class="field"><label>To</label>
+            <div class="input-wrap">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Where to?" id="flight-to" />
+          </div></div>
+          <div class="field"><label>Depart</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-calendar"></i>
+            <input type="date" id="flight-depart" />
+          </div></div>
+          <div class="field"><label>Return</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-calendar"></i>
+            <input type="date" id="flight-return" />
+          </div></div>
+          <div class="field"><label>Travelers</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-user"></i>
+            <select id="flight-travelers">
+              <option>1 Adult</option>
+              <option selected>2 Adults, 1 Child</option>
+              <option>2 Adults</option>
+              <option>Family (2 Adults, 2 Children)</option>
+              <option>3 Adults</option>
+            </select>
+          </div></div>
+          <button type="submit" class="btn btn-primary search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+        </form>
+
+        <!-- Hotels -->
+        <form class="booking-form" id="hotels">
+          <div class="field"><label>Destination</label>
+            <div class="input-wrap">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="City or hotel name" />
+          </div></div>
+          <div class="field"><label>Check-in</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-calendar"></i>
+            <input type="date" />
+          </div></div>
+          <div class="field"><label>Check-out</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-calendar"></i>
+            <input type="date" />
+          </div></div>
+          <div class="field"><label>Guests</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-user"></i>
+            <select>
+              <option>1 Guest</option>
+              <option selected>2 Guests</option>
+              <option>2 Adults, 1 Child</option>
+              <option>Family Room</option>
+            </select>
+          </div></div>
+          <div class="field"><label>Room</label>
+            <div class="input-wrap">
+            <i class="fa-solid fa-bed"></i>
+            <select>
+              <option>1 Room</option>
+              <option selected>2 Rooms</option>
+              <option>3 Rooms</option>
+            </select>
+          </div></div>
+          <button type="submit" class="btn btn-primary search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+        </form>
+
+        <!-- Tours -->
+        <form class="booking-form" id="tours">
+          <div class="field"><label>Destination</label>
+            <div class="input-wrap">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Where do you want to go?" />
+          </div></div>
+          <div class="field"><label>Tour Type</label>
+            <div class="input-wrap">
+            <i class="fa-solid fa-mountain-sun"></i>
+            <select>
+              <option>Adventure</option>
+              <option>Cultural</option>
+              <option>Beach</option>
+              <option>City Break</option>
+              <option>Honeymoon</option>
+            </select>
+          </div></div>
+          <div class="field"><label>Start Date</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-calendar"></i>
+            <input type="date" />
+          </div></div>
+          <div class="field"><label>Duration</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-clock"></i>
+            <select>
+              <option>1-3 Days</option>
+              <option selected>4-7 Days</option>
+              <option>1-2 Weeks</option>
+              <option>2+ Weeks</option>
+            </select>
+          </div></div>
+          <div class="field"><label>Travelers</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-user"></i>
+            <select>
+              <option>Solo</option>
+              <option selected>Couple</option>
+              <option>Family</option>
+              <option>Group</option>
+            </select>
+          </div></div>
+          <button type="submit" class="btn btn-primary search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+        </form>
+
+        <!-- Packages -->
+        <form class="booking-form" id="packages">
+          <div class="field"><label>Destination</label>
+            <div class="input-wrap">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Dream destination?" />
+          </div></div>
+          <div class="field"><label>Budget</label>
+            <div class="input-wrap">
+            <i class="fa-solid fa-sack-dollar"></i>
+            <select>
+              <option>Under $500</option>
+              <option selected>$500 - $1000</option>
+              <option>$1000 - $2500</option>
+              <option>$2500+</option>
+            </select>
+          </div></div>
+          <div class="field"><label>Departure Date</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-calendar"></i>
+            <input type="date" />
+          </div></div>
+          <div class="field"><label>Duration</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-clock"></i>
+            <select>
+              <option>Weekend</option>
+              <option selected>1 Week</option>
+              <option>2 Weeks</option>
+              <option>3+ Weeks</option>
+            </select>
+          </div></div>
+          <div class="field"><label>Travelers</label>
+            <div class="input-wrap">
+            <i class="fa-regular fa-user"></i>
+            <select>
+              <option>1 Person</option>
+              <option selected>2 People</option>
+              <option>Family</option>
+            </select>
+          </div></div>
+          <button type="submit" class="btn btn-primary search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature">
+        <div class="feature-icon"><i class="fa-solid fa-tag"></i></div>
+        <div>
+          <h3>Best Price Guarantee</h3>
+          <p>We ensure you get the best deals always.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+        <div>
+          <h3>24/7 Customer Support</h3>
+          <p>We're here to help you anytime, anywhere.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <h3>Secure Bookings</h3>
+          <p>Your data and payments are 100% safe with us.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+        <div>
+          <h3>Handpicked Experiences</h3>
+          <p>Curated tours and hotels for unforgettable trips.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POPULAR DESTINATIONS ============ -->
+  <section class="section" id="destinations">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Popular Destinations</h2>
+          <div class="underline"></div>
+        </div>
+        <a href="#" class="btn btn-outline">View All Destinations <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="destinations-grid" id="destinationsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="section why-section" id="about">
+    <div class="container why-grid">
+      <div class="why-left">
+        <h2>Why Choose <em>Wanderly?</em></h2>
+        <div class="underline"></div>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-icon"><i class="fa-solid fa-globe"></i></div>
+            <div>
+              <h3>Wide Range of Choices</h3>
+              <p>Choose from thousands of flights, hotels and tours worldwide.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+            <div>
+              <h3>Trusted by Travelers</h3>
+              <p>Join millions of happy travelers around the world.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-icon"><i class="fa-solid fa-rotate"></i></div>
+            <div>
+              <h3>Flexible & Easy Booking</h3>
+              <p>Book with ease and adjust your plans if needed.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-icon"><i class="fa-solid fa-percent"></i></div>
+            <div>
+              <h3>Exclusive Deals</h3>
+              <p>Get access to exclusive discounts and special offers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-right">
+        <div class="cta-card">
+          <span class="cta-tag">LET'S GO!</span>
+          <h2>Your Next Adventure Awaits!</h2>
+          <p>Discover breathtaking places and create unforgettable memories.</p>
+          <a href="#destinations" class="btn btn-white">Plan Your Trip <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter">
+    <div class="container newsletter-box">
+      <div class="newsletter-left">
+        <i class="fa-solid fa-paper-plane"></i>
+        <div>
+          <h3>Subscribe to Our Newsletter</h3>
+          <p>Get the latest travel deals and inspiration straight to your inbox.</p>
+        </div>
+      </div>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Enter your email" id="newsletterEmail" required />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="blog">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="logo logo-light">
+          <i class="fa-solid fa-plane-departure"></i>
+          <span>Wanderly<small>TRAVEL THE WORLD</small></span>
+        </a>
+        <p>Your trusted travel partner for unforgettable journeys around the globe.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#flights">Flights</a></li>
+          <li><a href="#hotels">Hotels</a></li>
+          <li><a href="#tours">Tours</a></li>
+          <li><a href="#">Packages</a></li>
+          <li><a href="#">Travel Insurance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 123 Travel St, New York, NY</li>
+          <li><i class="fa-solid fa-phone"></i> +1 234 567 8900</li>
+          <li><i class="fa-solid fa-envelope"></i> hello@wanderly.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Wanderly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL (search results / alerts) ============ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
